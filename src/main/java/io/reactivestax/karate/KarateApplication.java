@@ -1,4 +1,4 @@
-package io.reactivestax.karate.karate;
+package io.reactivestax.karate;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
