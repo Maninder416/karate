@@ -28,8 +28,8 @@ public class EmployeeController {
     }
 
     @PostMapping("/employees")
-    public String getAllEmployees(@RequestBody Employee employee){
+    public Employee getAllEmployees(@RequestBody Employee employee){
         employeeList.add(employee);
-        return "Employee added";
+        return employee;
     }
 }
