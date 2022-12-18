@@ -28,6 +28,15 @@ Feature: Post API Employee Demo
     And match response == expectedOutput
     And print response
 
+  Scenario: Post employee with get request and response from file
+    Given path '/employees'
+    And def requestBody = read('/jsons/employee.json')
+    And request requestBody
+    When method POST
+    Then status 200
+    And match response == expectedOutput
+    And print response
+
 
 
 
