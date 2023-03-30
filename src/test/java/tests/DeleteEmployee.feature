@@ -1,7 +1,7 @@
 Feature: Delete Employee API demo
 
   Background:
-    * url 'http://localhost:8080'
+    * url 'http://localhost:9001'
     * header Accept = 'application/json'
     * def expectedOutput = read('/jsons/employee.json')
 

@@ -1,12 +1,12 @@
 Feature: GET API Demo
 
   Background:
-    * url 'http://localhost:8080'
+    * url 'http://localhost:9001'
     * header Accept = 'application/json'
 
   #Here we are providing the proper API url
   Scenario: Test a Get Employee call with given URL
-    Given url 'http://localhost:8080/employees'
+    Given url 'http://localhost:9001/employees'
     When method GET
     Then status 200
     And print response

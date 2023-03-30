@@ -1,7 +1,7 @@
 function fn(){
     var config = {
         name : "Robin",
-        baseURL : 'https://reqres.in/api'
+        baseURL : 'http://localhost:9001'
     };
 
     //how to set environment variable
@@ -9,7 +9,7 @@ function fn(){
     karate.log('The value of env is : ',env)
 
     if(env== 'qa'){
-        config.baseURL = 'https://reqres.in/api/qa'
+        config.baseURL = 'http://localhost:9001'
     }
     else if(env=='dev'){
         config.baseURL = 'https://reqres.in/api/dev'
