@@ -2,7 +2,7 @@ package scrolltest;
 
 import com.intuit.karate.junit5.Karate;
 
-public class PersonTest {
+public class EmployeeTest {
 
     @Karate.Test
     Karate testAll() {
