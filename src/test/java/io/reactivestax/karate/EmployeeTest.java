@@ -1,4 +1,4 @@
-package scrolltest;
+package io.reactivestax.karate;
 
 import com.intuit.karate.junit5.Karate;
 
