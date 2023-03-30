@@ -1,11 +1,19 @@
-Feature: GET API Demo
+Feature: Verify Persons
 
   Background:
-    * url 'http://localhost:9001'
-    * header Accept = 'application/json'
+    Given url 'http://localhost:9001/'
 
-  #Here we are providing the proper API url
-  Scenario: Test a Get Employee call with given URL
+  Scenario: Post Employee
+    Given path '/employees'
+    And request {"name": "Robin-201"}
+    When method POST
+    Then status 200
+    And print response
+    And print response.name
+    And match response.name == "Robin-201"
+
+
+  Scenario: Get Employee call with given URL
     Given url 'http://localhost:9001/employees'
     When method GET
     Then status 200
@@ -34,3 +42,10 @@ Feature: GET API Demo
     Then status 200
     And print response
     And match header Content-Type == 'application/json'
+
+  Scenario: Delete Employee
+    Given path '/employees/1'
+    When method DELETE
+    Then status 200
+    And print response
+

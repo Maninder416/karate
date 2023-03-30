@@ -1,25 +1,18 @@
-function fn(){
-    var config = {
-        name : "Robin",
-        baseURL : 'http://localhost:9001'
-    };
-
-    //how to set environment variable
-    var env = karate.env
-    karate.log('The value of env is : ',env)
-
-    if(env== 'qa'){
-        config.baseURL = 'http://localhost:9001'
-    }
-    else if(env=='dev'){
-        config.baseURL = 'https://reqres.in/api/dev'
-    }
-    else{
-        config.baseURL = 'https://reqres.in/api/default'
-    }
-
-    karate.configure('connectTimeout', 50000 );
-    karate.configure('readTimeout', 50000)
-
-    return config;
+function fn() {
+  var env = karate.env; // get system property 'karate.env'
+  karate.log('karate.env system property was:', env);
+  if (!env) {
+    env = 'dev';
+  }
+  var config = {
+    env: env,
+	url: 'http://localhost:8081/'
+  }
+  if (env == 'dev') {
+    // customize
+    // e.g. config.foo = 'bar';
+  } else if (env == 'e2e') {
+    // customize
+  }
+  return config;
 }

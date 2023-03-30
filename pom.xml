@@ -14,7 +14,9 @@
 	<name>karate</name>
 	<description>Demo project for Spring Boot karate</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>1.8</java.version>
+		<karate.version>0.9.6</karate.version>
+
 	</properties>
 	<dependencies>
 		<dependency>
@@ -24,19 +26,14 @@
 		<!--Karate dependencies-->
 		<dependency>
 			<groupId>com.intuit.karate</groupId>
-			<artifactId>karate-core</artifactId>
-			<version>1.4.0.RC2</version>
-		</dependency>
-		<dependency>
-			<groupId>com.intuit.karate</groupId>
 			<artifactId>karate-apache</artifactId>
-			<version>0.9.6</version>
+			<version>${karate.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.intuit.karate</groupId>
-			<artifactId>karate-junit4</artifactId>
-			<version>1.4.0.RC2</version>
+			<artifactId>karate-junit5</artifactId>
+			<version>${karate.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
