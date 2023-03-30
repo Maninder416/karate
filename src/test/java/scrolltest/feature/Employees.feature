@@ -1,7 +1,7 @@
 Feature: Verify Persons
 
   Background:
-    Given url 'http://localhost:9000/'
+    Given url baseUrl
 
   Scenario: Post Employee
     Given path '/employees'
