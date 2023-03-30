@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     restart: on-failure
     ports:
-      - 9001:9001
+      - 9001:9000
 
     networks:
       - kafka-stack-network

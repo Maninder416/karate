@@ -1,7 +1,7 @@
 Feature: Verify Persons
 
   Background:
-    Given url 'http://localhost:9001/'
+    Given url 'http://localhost:9000/'
 
   Scenario: Post Employee
     Given path '/employees'
@@ -14,7 +14,7 @@ Feature: Verify Persons
 
 
   Scenario: Get Employee call with given URL
-    Given url 'http://localhost:9001/employees'
+    Given url 'http://localhost:9000/employees'
     When method GET
     Then status 200
     And print response
