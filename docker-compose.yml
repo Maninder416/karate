@@ -1,6 +1,17 @@
 version: '2'
 services:
 
+  spring-boot-h2-db:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: on-failure
+    ports:
+      - 9001:9001
+
+    networks:
+      - kafka-stack-network
+
   jenkins:
     build:
       context: .
