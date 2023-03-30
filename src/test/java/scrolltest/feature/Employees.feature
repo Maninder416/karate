@@ -30,11 +30,12 @@ Feature: Verify Persons
     And print response
 
   Scenario: Test a GET Employee by Id
-    Given path '/employees/'
-    And param employee = 1
+    Given path '/employees/2'
+    And param employee = 10
     When method GET
     Then status 200
     And print response
+#    And match response.name= "Maninder"
 
   Scenario: Test a GET Employee with Assertions
     Given path '/employees'
